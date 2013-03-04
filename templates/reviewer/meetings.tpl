@@ -1,17 +1,33 @@
 {**
- * Meetings page template
- * Added by ayveemallare 7/6/2011
- **}
-
+ * index.tpl
+ *
+ * Copyright (c) 2003-2011 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * Reviewer index.
+ *
+ * $Id$
+ *}
 {strip}
 {assign var="pageTitle" value="reviewer.meetings"}
-{assign var="pageCrumbTitle" value="reviewer.meetings"}
 {include file="common/header.tpl"}
 {/strip}
 
+{if !$dateFrom}
+{assign var="dateFrom" value="--"}
+{/if}
+
+{if !$dateTo}
+{assign var="dateTo" value="--"}
+{/if}
 <ul class="menu">
-	<li class="current"><a href="{url op="meetings"}">{translate key="reviewer.meetings"}</a></li>
+	<li class="current"}><a href="{url op="meetings"}">{translate key="reviewer.meetings"}</a></li>
+	<li><a href="{url op="proposalsOfMeetings"}">{translate key="common.queue.short.meetingProposals"}</a></li>
 </ul>
+<br />
+
+<br />
+
 <div class="separator"></div>
 <br/>
 {if !$dateFrom}
@@ -21,6 +37,7 @@
 {if !$dateTo}
 {assign var="dateTo" value="--"}
 {/if}
+
 <form method="post" name="submit" action="{url op="meetings"}">
 <div id="search">
 	<table align="left">
@@ -91,22 +108,7 @@
 				{/if}
 			</td>
 			<td width="25%" align="right">
-<!--				{if $meeting->getStatus() == 4}-->
-<!--					 <img src="{$baseUrl|cat:"/lib/pkp/styles/images/who_icons/new.png"}">-->
-<!--				{/if}-->
-<!--				{if $meeting->getStatus() == 1}-->
-<!--					 <img src="{$baseUrl|cat:"/lib/pkp/styles/images/who_icons/final.png"}">-->
-<!--				{/if}	-->
-<!--				{if $meeting->getStatus() == 2}-->
-<!--					 <img src="{$baseUrl|cat:"/lib/pkp/styles/images/who_icons/resched.png"}">-->
-<!--				{/if}-->
-<!--				{if $meeting->getStatus() == 3}-->
-<!--					 <img src="{$baseUrl|cat:"/lib/pkp/styles/images/who_icons/cancelled.png"}">-->
-<!--				{/if}-->
-<!--				{if $meeting->getStatus() == 5}-->
-<!--					 <img src="{$baseUrl|cat:"/lib/pkp/styles/images/who_icons/done.png"}">-->
-<!--				{/if}-->
-				{$meeting->getDate()|date_format:"%Y-%m-%d %I:%M %p"}</td>
+				{$meeting->getDate()|date_format:$datetimeFormatLong}</td>
 			<td width="15%" align="right">
 				{$meeting->getStatusKey()}
 			</td>

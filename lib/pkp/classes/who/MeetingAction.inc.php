@@ -38,7 +38,6 @@ class MeetingAction extends Action {
 			
 		}
 		return false;
-	
 	}
 	
 	/*

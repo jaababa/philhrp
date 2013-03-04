@@ -74,12 +74,11 @@ class SetMeetingForm extends Form {
 	
 		/*Get the selected submissions to be reviewed*/
 		$meetingDao =& DAORegistry::getDAO('MeetingDAO');
-		$meeting =$meetingDao->getMeetingById($meetingId);
-		
+		$meeting =& $meetingDao->getMeetingById($meetingId);
+
 		/*Get the selected submissions to be reviewed*/
 		$meetingSubmissionDao =& DAORegistry::getDAO('MeetingSubmissionDAO');
 		$selectedSubmissions =$meetingSubmissionDao->getMeetingSubmissionsByMeetingId($meetingId);
-		
 		$templateMgr =& TemplateManager::getManager();
 		$templateMgr->assign('meetingId', $meetingId);
 		$templateMgr->assign('meetingDate', $meeting->getDate());

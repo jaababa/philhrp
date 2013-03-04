@@ -23,7 +23,6 @@ switch ($op) {
 	// Submission Tracking
 	//
 	case 'submission':
-	case 'submissionForFullReview':
 	case 'confirmReview':
 	case 'saveCompetingInterests':
 	case 'recordRecommendation':
@@ -42,7 +41,6 @@ switch ($op) {
 	//
 	
 	case 'downloadFile':
-	case 'downloadFileFullReview':
 	//
 	// Submission Review Form
 	//
@@ -62,16 +60,23 @@ switch ($op) {
 		define('HANDLER_CLASS', 'SubmissionCommentsHandler');
 		import('pages.reviewer.SubmissionCommentsHandler');
 		break;
+	case 'index':
+	case 'submissions':
+	//	
+	// Meetings
+	//
+	case 'meetings':
+		define('HANDLER_CLASS', 'ReviewerHandler');
+		import('pages.reviewer.ReviewerHandler');
+		break;
+	case 'proposalsOfMeetings':
+		define('HANDLER_CLASS', 'ReviewerHandler');
+		import('pages.reviewer.ReviewerHandler');
+		break;
 	case 'viewMeeting':
 	case 'replyMeeting':
 		define('HANDLER_CLASS', 'MeetingReviewerHandler');
 		import('pages.reviewer.MeetingReviewerHandler');
-		break;
-	case 'index':
-	case 'submissions':
-	case 'meetings':
-		define('HANDLER_CLASS', 'ReviewerHandler');
-		import('pages.reviewer.ReviewerHandler');
 		break;
 }
 

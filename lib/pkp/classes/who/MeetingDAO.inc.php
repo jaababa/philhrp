@@ -65,7 +65,7 @@ class MeetingDAO extends DAO {
 		//Edited by ayveemallare 7/6/2011
 		
 		$result =& $this->retrieve(
-			'SELECT meeting_id, section_id, meeting_date, meeting_length, location, investigator, minutes_status, status FROM meetings WHERE meeting_id = ?',
+			'SELECT * FROM meetings WHERE meeting_id = ?',
 			(int) $meetingId
 		);
 		

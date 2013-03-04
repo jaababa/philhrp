@@ -119,7 +119,7 @@
 <h2>{translate key="reviewer.meetings.reply"}</h2>
 <div class="separator"></div>
 <a name="reply"></a>
-<table width="100%" class="listing" {if $meeting->getIsAttending() == 0}style="display: none;"{/if}>
+<table width="100%" class="listing" {if $meeting->getIsAttending() == 3}style="display: none;"{/if}>
 	<tr valign="top">
 		<td class="label" width="30%">{translate key="reviewer.article.schedule.isAttending"}</td>
 		<td class="value" width="70%">{if  $meeting->getIsAttending() == 1 }{translate key="common.yes"}{elseif  $meeting->getIsAttending() == 2 }{translate key="common.no"}{else}{translate key="common.undecided"}{/if}</td>
@@ -138,19 +138,19 @@
 	</tr>
 </table>
 <form method="post" action="{url op="replyMeeting"}" >
-<table width="100%" class="data" id="replyMeetingForm" {if $meeting->getIsAttending() != 0}style="display: none;"{/if}>
+<table width="100%" class="data" id="replyMeetingForm" {if $meeting->getIsAttending() != 3}style="display: none;"{/if}>
 <tr><td colspan="2" class="headseparator">&nbsp;</td></tr>
 <tr valign="top">
-	<td class="label" width="20%">{translate key="reviewer.article.schedule.isAttending"} </td>
-	<td class="value" width="80%">	
+	<td class="label" width="30%">{translate key="reviewer.article.schedule.isAttending"} </td>
+	<td class="value" width="70%">	
 		<input type="radio" name="isAttending" id="acceptMeetingSchedule" value="1" {if  $meeting->getIsAttending() == 1 } checked="checked"{/if} > </input> {translate key="common.yes"}
 		<input type="radio" name="isAttending" id="regretMeetingSchedule" value="2" {if  $meeting->getIsAttending() == 2 } checked="checked"{/if} > </input> {translate key="common.no"}
 		<input type="radio" name="isAttending" id="undecidedMeetingSchedule" value="0" {if  $meeting->getIsAttending() == 0 } checked="checked"{/if} > </input> {translate key="common.undecided"}
 	</td>
 </tr> 
 <tr>
-	<td class="label" width="20%">{translate key="reviewer.article.schedule.remarks"} </td>
-	<td class="value" width="80%">
+	<td class="label" width="30%">{translate key="reviewer.article.schedule.remarks"} </td>
+	<td class="value" width="70%">
 		<textarea class="textArea" name="remarks" id="proposedDate" rows="5" cols="40" />{$meeting->getRemarks()|escape}</textarea>
 	</td>
 </tr>

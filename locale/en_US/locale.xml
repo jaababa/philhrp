@@ -97,13 +97,13 @@
     <message key="common.queue.long.submissionsNotApproved">Not Approved Proposals</message>
 	<message key="common.queue.long.submissionsArchives">Archived Proposals</message>
 	<message key="common.queue.short.submissionsArchives">Archives</message>
-	<message key="common.queue.long.active">Active Submissions</message>
+	<message key="common.queue.long.active">Active Proposals</message>
 	<message key="common.queue.short.active">Active</message>
 	<message key="common.queue.long.completed">Archived Proposals</message>
     <message key="common.queue.long.submissionsApproved">Approved Proposals</message>
 	<message key="common.queue.short.completed">Archive</message>
-    <message key="common.queue.short.fullReview">Full Review</message>
-    <message key="common.queue.long.fullReview">Proposals for Full Review</message>
+    <message key="common.queue.short.meetingProposals">Proposals</message>
+    <message key="common.queue.long.meetingProposals">Proposals of the meetings</message>
 
 	
 	<!--
@@ -155,7 +155,7 @@
         
 	<message key="article.commentsToEditor">Investigator comments</message> /*replace Author to Investigator */
 	<message key="article.submission">Submission</message>
-	<message key="article.submissions">Submissions</message>
+	<message key="article.submissions">Proposals</message>
 	<message key="article.details">Details</message>
 	<message key="article.abstract">Abstract</message>
     <message key="article.studentInstitution">Student Institution</message>
@@ -674,11 +674,12 @@ Active is how many reviews are currently being considered or underway.]]></messa
 	
 	<!-- Reviewer -->
 	<message key="reviewer.home">Reviewer Home</message>
-	<message key="reviewer.submissions">Submissions</message>
+	<message key="reviewer.submissions">Proposals</message>
 	<message key="reviewer.meeting">Meeting</message>
 	<message key="reviewer.meetings">Meetings</message>
-	<message key="reviewer.meetings.submissions">Submissions to be Discussed</message>
-	<message key="reviewer.meetings.noSubmissions">No Submissions</message>
+    <message key="reviewer.proposals">Meetings</message>
+	<message key="reviewer.meetings.submissions">Proposals to be Discussed</message>
+	<message key="reviewer.meetings.noSubmissions">No Proposals</message>
 	<message key="reviewer.meetings.replyStatus">Reply Status</message>
 	<message key="reviewer.meetings.erc">Ethics Review Committee</message>
 	<message key="reviewer.meetings.scheduleStatus">Schedule Status</message>
@@ -1001,10 +1002,10 @@ current password.<br /><br />Enter your email address below to reset your passwo
 	<message key="about.editorialPolicies">Editorial Policies</message>
 	<message key="about.focusAndScope">Focus and Scope</message>
 	<message key="about.sectionPolicies">Section Policies</message>
-	<message key="about.submissions">Submissions</message>
+	<message key="about.submissions">Proposals</message>
 	<message key="about.sponsors">Sponsors</message>
 	<message key="about.contributors">Sources of Support</message>
-	<message key="about.onlineSubmissions">Online Submissions</message>
+	<message key="about.onlineSubmissions">Online Proposals</message>
 	<message key="about.onlineSubmissions.haveAccount">Already have a Username/Password for {$journalTitle}?</message>
 	<message key="about.onlineSubmissions.login">Go to Login</message>
         

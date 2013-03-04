@@ -266,8 +266,7 @@ class ReviewerSubmissionDAO extends DAO {
 	 * @param $rangeInfo object
 	 * @return array ReviewerSubmissions
 	 */
-	function &getReviewerSubmissionsByReviewerId($reviewerId, $journalId, $active = true, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, 
-											  $technicalUnitField = null, $countryField = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
+	function &getReviewerSubmissionsByReviewerId($reviewerId, $journalId, $active = true, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null, $sortBy = null, $sortDirection = SORT_DIRECTION_ASC) {
 		$primaryLocale = Locale::getPrimaryLocale();
 		$locale = Locale::getLocale();
 		$params = array(
@@ -280,7 +279,6 @@ class ReviewerSubmissionDAO extends DAO {
 				$journalId,
 				$reviewerId);
 		$searchSql = '';
-		$countrySql = '';
 		
 		if (!empty($search)) switch ($searchField) {
 			case SUBMISSION_FIELD_TITLE:
@@ -324,10 +322,6 @@ class ReviewerSubmissionDAO extends DAO {
 				}
 				break;
 		}
-											  	
-		if (!empty($countryField)) {
-			$countrySql = " AND LOWER(COALESCE(apc.setting_value, appc.setting_value)) = '" . $countryField . "'";
-		}
 		
 		$sql = 'SELECT	a.*,
 				r.*,
@@ -354,7 +348,7 @@ class ReviewerSubmissionDAO extends DAO {
 		}
 		
 		$result =& $this->retrieveRange(
-			$sql . ' ' . $searchSql . $countrySql . ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
+			$sql . ' ' . $searchSql . ($sortBy?(' ORDER BY ' . $this->getSortMapping($sortBy) . ' ' . $this->getDirectionMapping($sortDirection)) : ''),
 			count($params)===1?array_shift($params):$params,
 			$rangeInfo
 		);
