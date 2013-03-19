@@ -23,6 +23,14 @@
 	<message key="manager.groups.enableBoard">The Site Manager creates titles and adds people under each title.</message>
 	<message key="manager.groups.enableBoard.description"><![CDATA[Under <a href="{$aboutEditorialTeamUrl}">People</a> in About the Site:]]></message>
 	<message key="manager.groups.noneCreated">No ERC have been created.</message>
+	<!--
+		Added by JAA 03 07 2013
+		For the creation of new institutions
+	-->
+		<message key="manager.institutions.create">Add new institution</message>
+		<message key="manager.institutions.form.nameRequired">A name is required for the institution</message>
+		<message key="manager.institutions.form.regionRequired">The region for the institution is required</message>
+		
 	<message key="manager.journalManagement">Site Management</message>
 	<message key="manager.language.ui">UI</message>
 	<message key="manager.language.submissions">Submissions</message>

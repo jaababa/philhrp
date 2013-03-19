@@ -15,7 +15,7 @@
     <message key="user.uhsStudent">UHS Student</message>
     <message key="user.studentId">Student ID</message>
     <message key="user.tel">Phone number</message>
-	<message key="user.affiliation.description">(Your institution, e.g. "Mindanao State University")</message>
+	<message key="user.affiliation.description">(Your institution, e.g. "University of the Philippines Manila")</message>
 	<message key="user.affiliations">Affiliations / Institutions</message>
 
 	<message key="user.authorization.accessDenied">Access denied.</message>
@@ -39,7 +39,7 @@
 	<message key="user.feminine">F</message>
 	<message key="user.firstName">First name</message>
 	<message key="user.gender">Gender</message>
-	<message key="user.initialsExample">Joshua Abasolo Ababa = JAA</message>
+	<message key="user.initialsExample">Juan Santos Castro = JSC</message>
 	<message key="user.initials">Initials</message>
 	<message key="user.interests">Reviewing interests</message>
     <message key="user.interests.description">(Separate interests by pressing the enter or comma key)</message>

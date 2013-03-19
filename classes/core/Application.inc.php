@@ -102,6 +102,11 @@ class Application extends PKPApplication {
 			'GroupDAO' => 'lib.pkp.classes.group.GroupDAO',
 			'GroupMembershipDAO' => 'lib.pkp.classes.group.GroupMembershipDAO',
 			'IndividualSubscriptionDAO' => 'classes.subscription.IndividualSubscriptionDAO',
+				
+				// Added by Joshua Ababa on March 5 2013
+				// New DAO for the institution library
+				'InstitutionDAO' => 'classes.journal.InstitutionDAO',
+				
 			'InstitutionalSubscriptionDAO' => 'classes.subscription.InstitutionalSubscriptionDAO',
 			'IssueDAO' => 'classes.issue.IssueDAO',
 			'JournalDAO' => 'classes.journal.JournalDAO',

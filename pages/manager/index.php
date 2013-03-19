@@ -52,6 +52,18 @@ switch ($op) {
 		import('pages.manager.PeopleHandler');
 		break;
 	//
+	// Institution Management
+	//
+	case 'institutions':
+	case 'deleteInstitution':
+	case 'editInstitution':
+	case 'createInstitution':
+	case 'updateInstitution':
+		define('HANDLER_CLASS', 'InstitutionHandler');
+		import('pages.manager.InstitutionHandler');
+		break;
+	
+	//
 	// Section Management
 	//
 	case 'sections':

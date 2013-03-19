@@ -19,7 +19,6 @@
 <input type="hidden" name="editorAction" value="" />
 <input type="hidden" name="userId" value="" />
 
-
 {include file="common/formErrors.tpl"}
 <div id="sectionForm">
 <table class="data" width="100%">

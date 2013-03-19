@@ -112,11 +112,20 @@
 	 *            major entities, e.g. Article, the Demo National Health Research Portal, Section
 	 *
 	-->
-
+	<!--
+		Common Institution Terms
+		Added by JAA 03 06 2013
+	-->
+	<message key="institution.name">Institution</message>
+	<message key="institution.region">Region</message>
+	<message key="institution.title">Institution Name</message>
+	
 	<!-- Common Section Terms -->
 	<message key="section.section">Ethics Review Committee</message>
     <message key="section.sectionAbbrev">ERC</message>
 	<message key="section.sections">Ethics Review Committees</message>
+	<message key="section.institution">Institution</message>
+	<message key="section.institutions">Institutions</message>
 
 	<message key="section.title">Ethics Committee title</message>
 	<message key="section.abbreviation">Abbreviation</message>
