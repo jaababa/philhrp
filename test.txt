@@ -1,0 +1,16 @@
+object(Institution)#130 (2) {
+  ["_data"]=>
+  array(3) {
+    ["id"]=>
+    string(1) "8"
+    ["institution"]=>
+    string(8) "asdfasdf"
+    ["region"]=>
+    string(30) "Region IX, Zamboanga Peninsula"
+  }
+  ["_metadataAdapters"]=>
+  array(0) {
+  }
+}
+string(30) "Region IX, Zamboanga Peninsula"
+string(8) "asdfasdf"
